@@ -16,6 +16,7 @@ def won?(board)
   row_win =[]
   empty_board= board.all? {|x| x ==" "}
   WIN_COMBINATIONS.each do |row_win_position|
+<<<<<<< HEAD
    # row_win_position.each do |board|
      # if empty_board || full?(board)
        # return false
@@ -47,6 +48,33 @@ end
 def full?(board)
   empty_board= board.all? {|x| x =="X" || x=="O"}
   
+=======
+    row_win_position.each do |position_for_win|
+      if empty_board
+        return false
+      elsif !empty_board && position_for_win == "X"
+        return position_for_win
+      end
+    end
+    
+  end
+    
+#     nested_students.each do |student_array|
+#   student_array.each do |student_detail|
+#     puts student_detail
+#   end
+# end
+    
+#     if empty_board
+#       return false
+#     elsif row_win_position.all? { |value| board[value] =="X" } || row_win_position.all? { |value| board[value] =="O" }
+#       row_win = row_win_position
+  
+#     end
+#   end
+# end
+#   return row_win
+>>>>>>> a2af31052b3d5bf04b7f5462fc27a03ab2c859e6
 end
 
 def draw?(board)
